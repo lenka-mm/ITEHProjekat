@@ -16,6 +16,9 @@ export class User {
     @Column()
     email: string;
 
+    @Column()
+    admin: boolean;
+
     @Column({
         select: false,
         transformer: new EncryptionTransformer({
