@@ -5,19 +5,19 @@ import { Genre } from "./Genre";
 @Entity()
 export class Movie {
 
-  @PrimaryGeneratedColumn()
-  id: number;
+    @PrimaryGeneratedColumn()
+    id: number;
 
-  @Column()
-  title: string;
+    @Column()
+    title: string;
 
-  @Column()
-  plot: string;
+    @Column()
+    plot: string;
 
 
-  @Column()
-  url: string;
+    @Column()
+    url: string;
 
-  @ManyToOne(() => Genre)
-  genre: Genre;
+    @ManyToOne(() => Genre)
+    genre: Genre;
 }
