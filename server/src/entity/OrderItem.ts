@@ -17,5 +17,5 @@ export class OrderItem {
 
 
     @Column()
-    kolicina: number;
+    amount: number;
 }

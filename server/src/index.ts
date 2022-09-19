@@ -16,9 +16,7 @@ interface UserBody {
 }
 
 
-AppDataSource.initialize().then(async connection => {
-    const key = fs.readFileSync('./key.pem', 'utf8');
-    const cert = fs.readFileSync('./cert.pem', 'utf8');
+AppDataSource.initialize().then(() => {
     // create express app
     const app = express();
     app.use(cors({
@@ -118,10 +116,6 @@ AppDataSource.initialize().then(async connection => {
 
     // start express server
 
-    const server = https.createServer({
-        key: key,
-        cert: cert,
-    }, app)
-    server.listen(4000, () => console.log('app is listening'))
+    app.listen(4000, () => console.log('app is listening'))
 
 }).catch(error => console.log(error));

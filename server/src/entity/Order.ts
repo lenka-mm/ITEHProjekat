@@ -13,13 +13,13 @@ export class Order {
     user: User
 
     @Column()
-    poslata: boolean
+    sent: boolean
 
     @Column()
-    adresa: string
+    address: string
 
     @Column()
-    telefon: string
+    phone: string
 
     @OneToMany(() => OrderItem, s => s.order)
     items: OrderItem[]
