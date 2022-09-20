@@ -72,6 +72,7 @@ AppDataSource.initialize().then(() => {
             token
         })
     })
+    app.use('/uploads', express.static('uploads'))
 
     app.use(async (req, res, next) => {
         const authorization = req.headers.authorization;
@@ -106,7 +107,6 @@ AppDataSource.initialize().then(() => {
         res.json(user);
     })
 
-    app.use('/uploads', express.static('uploads'))
     Routes.forEach(route => {
         app[route.method](route.route, ...route.actions);
     });

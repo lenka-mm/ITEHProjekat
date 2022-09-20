@@ -26,9 +26,10 @@ export async function updateMovie(req: Request, res: Response) {
 
 export async function createMovie(req: Request, res: Response) {
   const genre = await AppDataSource.getRepository(Genre).findOne({ where: { id: req.body.genreId } });
-
   const movie = await AppDataSource.getRepository(Movie).save({
     ...req.body,
+    image: 'http://localhost:4000/uploads/' + req.body.image,
+    url: req.body.file ? ('http://localhost:4000/uploads/' + req.body.file) : undefined,
     genre
   })
   res.json(movie);

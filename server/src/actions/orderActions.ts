@@ -48,6 +48,7 @@ export async function createOrder(req: Request, res: Response) {
       await manager.save(OrderItem, {
         movie,
         amount: item.amount,
+        price: movie.price,
         order
       })
     }

@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import * as multer from "multer";
+import path = require("path");
 import deleteEntity from "./actions/deleteEntity";
 import { getAllGenres } from "./actions/genreActions";
 import { isAdmin } from "./actions/isAdmin";
@@ -16,7 +17,7 @@ export interface Route {
 
 
 const upload = multer({
-    dest: '/uploads', fileFilter: function (req, file, cb) {
+    dest: path.resolve('uploads/'), fileFilter: function (req, file, cb) {
         if (!file) {
             cb(null, false)
         } else {

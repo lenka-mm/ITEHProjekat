@@ -15,8 +15,15 @@ export class Movie {
     plot: string;
 
 
+    @Column({ nullable: true })
+    url?: string;
+
     @Column()
-    url: string;
+    image: string;
+
+    @Column()
+    price: number;
+
 
     @ManyToOne(() => Genre)
     genre: Genre;

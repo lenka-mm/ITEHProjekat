@@ -1,0 +1,32 @@
+.loginSlika{
+  background-image: url('https://foodtank.com/wp-content/uploads/2021/07/alfons-morales-YLSwjSy7stw-unsplash.jpg');
+  background-size: cover;
+}
+.loginRed{
+  height: 95vh;
+}
+.marginTop{
+  margin-top: 10px;
+}
+.marginTop-very{
+  margin-top: 100px !important;
+}
+.pocetnaSlika{
+  width: 100vw;
+  height: 93vh;
+  background-image: url('https://www.trafalgar.com/real-word/wp-content/uploads/sites/3/2020/03/Strahov-Library-Prague-1.jpg');
+  background-size: cover;
+}
+.slikaPozadina{
+  width: 100vw;
+  height: 20vh;
+  background-size: cover;
+  margin-bottom: 15px;
+background-image: url('https://media.wired.com/photos/5fd2c29c2a4ddaf3b6389694/191:100/w_2580,c_limit/Gear-Books-Roundup-671406905.jpg');
+}
+.marginBottom-very{
+  margin-bottom: 30px !;
+}
+.marginButton{
+  margin-top: 10px !important;
+}

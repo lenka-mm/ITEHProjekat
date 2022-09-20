@@ -7,5 +7,5 @@ export class Genre {
     id: number;
 
     @Column()
-    naziv: string;
+    name: string;
 }

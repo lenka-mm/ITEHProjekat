@@ -15,6 +15,8 @@ export class OrderItem {
     @ManyToOne(t => Movie, { eager: true })
     movie: Movie;
 
+    @Column()
+    price: number;
 
     @Column()
     amount: number;
